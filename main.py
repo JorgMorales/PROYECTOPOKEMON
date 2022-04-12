@@ -5,6 +5,17 @@
 
 # La importación de esta librería dentro de mi código fuente permitirá que pueda ejecutar tiempos de espera que considere adecuados para la impresión de una respuesta"
 import time
+import random
+
+#Función que me ayuda a establecer los movimientos que el Pokémon Tendrá posteriormente
+
+movimientos = ("Látigo cepa","Latigazo","Rayo solar","Ascuas","Lanzallamas","Puño fuego","Hidrobomba","Pistola agua","Rayo burbujas","Chupa vidas","Pin misil","Tijera X","Picotazo","Pico taladro","Tornado","Agarre","Ataque rápido","Bomba huevo","Ácido","Picotazo venenoso","Residuos","Pueño trueno","Trueno","Rayo","Hueso palo","Huesomerang","Terremoto","Come sueños","Bola neblina","Resplandor")
+
+def mov():
+    primermovimiento = (random.sample(movimientos, 1))
+    segundomovimiento = (random.sample(movimientos, 1))
+    print("Primer movimiento: ", primermovimiento)
+    print("Segundo movimiento: ", segundomovimiento)
 
 #Introducción o bienvenida por parte del programa que le permitirá al usuario conocer la interfaz y objetivo del programa en general
 print ("------------- Bienvenido Maestro Pokemon -----------------")
@@ -113,3 +124,10 @@ if pokemoninicial == "Squirtle":
 if pokemoninicial != "Charmander" and pokemoninicial != "Squirtle" and pokemoninicial != "Bulbasaur":
     print("El valor ingresado es inválido, se procederá a finalizar el programa")
     exit()
+#La siguiente parte se encarga de la asignación de emote al pokemon seleccionado anteriormente
+emote = str(input("Por favor asígnele un nuevo apodo a su compañero Pokémon: "))
+print("Tu compañero Pokémon ",pokemoninicial," recibió el emote: ",emote)
+lvlpkinicial = 5
+#función que me permite definir los movimientos del compañero
+print("-------------------")
+mov()
