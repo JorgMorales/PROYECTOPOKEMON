@@ -17,6 +17,12 @@ def mov():
     print("Primer movimiento: ", primermovimiento)
     print("Segundo movimiento: ", segundomovimiento)
 
+def stats():
+    ataquepk = random.randint(1,15)
+    defensa = random.randint(1,15)
+    velocidad = random.randint(1,15)
+    ps = random.randint(1,15)
+
 #Introducción o bienvenida por parte del programa que le permitirá al usuario conocer la interfaz y objetivo del programa en general
 print ("------------- Bienvenido Maestro Pokemon -----------------")
 time.sleep(1)
@@ -76,6 +82,7 @@ if pokemoninicial == "Bulbasaur":
     opcionpokemon = int(input("ingrese su opción: "))
     if opcionpokemon == 1:
         print("Felicidades, tu compañero pokémon es: ",pokemoninicial,"!")
+        tipo = "Planta"
     if opcionpokemon == 2:
         print("¿Estás seguro de cambiar de pokémon?")
         print("1 = si | 2 = no")
@@ -83,16 +90,22 @@ if pokemoninicial == "Bulbasaur":
         if opcionpk == 1:
             print("Sus opciones son: ")
             print("Charmander | Squirtle")
-            inicial = input("Ingrese el nombre del pokémon que desea elegir: ")
-            print("¡Felicidades, su nuevo compañero es: ",inicial,"!")
+            pokemoninicial = input("Ingrese el nombre del pokémon que desea elegir: ")
+            print("¡Felicidades, su nuevo compañero es: ",pokemoninicial,"!")
+            if pokemoninicial == "Squirtle":
+                tipo = "Agua"
+            if pokemoninicial == "Charmander":
+                tipo = "Fuego"
         if opcionpk == 2:
-            print("Entonces tu compañero seguirá siendo",inicial,"!")
+            print("Entonces tu compañero seguirá siendo",pokemoninicial,"!")
+            tipo = "Planta"
 if pokemoninicial == "Charmander":
     print("El pokémon seleccionado fue: ", pokemoninicial, ", quieres a Charmander como tu acompañante? ")
     print("1 = si | 2 = no")
     opcionpokemon = int(input("ingrese su opción: "))
     if opcionpokemon == 1:
         print("Felicidades, tu compañero pokémon es: ", pokemoninicial, "!")
+        tipo = "Fuego"
     if opcionpokemon == 2:
         print("¿Estás seguro de cambiar de pokémon?")
         print("1 = si | 2 = no")
@@ -100,16 +113,22 @@ if pokemoninicial == "Charmander":
         if opcionpk == 1:
             print("Sus opciones son: ")
             print("Bulbasaur | Squirtle")
-            inicial = input("Ingrese el nombre del pokémon que desea elegir: ")
-            print("¡Felicidades, su nuevo compañero es: ", inicial, "!")
+            pokemoninicial = input("Ingrese el nombre del pokémon que desea elegir: ")
+            if pokemoninicial == "Bulbasaur":
+                tipo = "planta"
+            if pokemoninicial == "Squirtle":
+                tipo = "Agua"
+            print("¡Felicidades, su nuevo compañero es: ", pokemoninicial, "!")
         if opcionpk == 2:
-            print("Entonces tu compañero seguirá siendo", inicial, "!")
+            print("Entonces tu compañero seguirá siendo", pokemoninicial, "!")
+            tipo = "Fuego"
 if pokemoninicial == "Squirtle":
     print("El pokémon seleccionado fue: ", pokemoninicial, ", quieres a Squirtle como tu acompañante? ")
     print("1 = si | 2 = no")
     opcionpokemon = int(input("ingrese su opción: "))
     if opcionpokemon == 1:
         print("Felicidades, tu compañero pokémon es: ", pokemoninicial, "!")
+        tipo = "Agua"
     if opcionpokemon == 2:
         print("¿Estás seguro de cambiar de pokémon?")
         print("1 = si | 2 = no")
@@ -117,17 +136,60 @@ if pokemoninicial == "Squirtle":
         if opcionpk == 1:
             print("Sus opciones son: ")
             print("Bulbasaur | Charmander ")
-            inicial = input("Ingrese el nombre del pokémon que desea elegir: ")
-            print("¡Felicidades, su nuevo compañero es: ", inicial, "!")
+            pokemoninicial = input("Ingrese el nombre del pokémon que desea elegir: ")
+            print("¡Felicidades, su nuevo compañero es: ", pokemoninicial, "!")
+            if pokemoninicial == "Bulbasaur":
+                tipo = "Planta"
+            if pokemoninicial == "Charmander":
+                tipo = "Fuego"
         if opcionpk == 2:
-            print("Entonces tu compañero seguirá siendo", inicial, "!")
+            print("Entonces tu compañero seguirá siendo", pokemoninicial, "!")
+            tipo = "Agua"
 if pokemoninicial != "Charmander" and pokemoninicial != "Squirtle" and pokemoninicial != "Bulbasaur":
-    print("El valor ingresado es inválido, se procederá a finalizar el programa")
+    print("Parece que ese Pokémon no se encuentra registrado en los iniciales o no existe en la Pokedex, se procederá a finalizar el programa")
     exit()
 #La siguiente parte se encarga de la asignación de emote al pokemon seleccionado anteriormente
 emote = str(input("Por favor asígnele un nuevo apodo a su compañero Pokémon: "))
 print("Tu compañero Pokémon ",pokemoninicial," recibió el emote: ",emote)
 lvlpkinicial = 5
+xpinicial = 0
+i = 0
+c = 0
 #función que me permite definir los movimientos del compañero
 print("-------------------")
-mov()
+print("-------------------")
+print("----------MENÚ PRINCIPAL----------")
+print(" 1) Chequeo de estadísticas ")
+print(" 2) Batalla contra Pokémon ")
+print(" 3) Salir del videojuego")
+opcionmenu = int(input("Ingrese la opción que desee: "))
+while opcionmenu > 0 and opcionmenu<3:
+    print(" ")
+    print("CHEQUEO DE ESTADÍSTICAS")
+    print("-----------------------")
+    print(" ")
+    print("Dato | Descripción ")
+    A1 = ["Nombre", "Apodo", "Nivel", "Experiencia", "Tipo", "Movimientos"]
+    A2 = [pokemoninicial, emote, lvlpkinicial, xpinicial,tipo, mov()]
+    for i in range(i, 6):
+        print(A1[i], " : ", A2[c])
+        i = i + 1
+        c = c + 1
+    print("-------------------")
+    print("Cinta de opciones")
+    print("1) Regresar al menú")
+    print("2) Salir del programa")
+    opcionmenu2 = int(input())
+    if opcionmenu2 == 1:
+        print("-------------------")
+        print("----------MENÚ PRINCIPAL----------")
+        print(" 1) Chequeo de estadísticas ")
+        print(" 2) Batalla contra Pokémon ")
+        print(" 3) Salir del videojuego")
+        opcionmenu = int(input("Ingrese la opción que desee: "))
+    if opcionmenu2 == 2:
+        print("Se seleccionó")
+while opcionmenu > 0 and opcionmenu<3:
+    print("opcion 2")
+if opcionmenu == 3:
+    print("Gracias por usar el programa Entrenador ",nombremaestropk)
