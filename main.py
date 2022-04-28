@@ -9,19 +9,482 @@ import random
 
 #Función que me ayuda a establecer los movimientos que el Pokémon Tendrá posteriormente
 
-movimientos = ("Látigo cepa","Latigazo","Rayo solar","Ascuas","Lanzallamas","Puño fuego","Hidrobomba","Pistola agua","Rayo burbujas","Chupa vidas","Pin misil","Tijera X","Picotazo","Pico taladro","Tornado","Agarre","Ataque rápido","Bomba huevo","Ácido","Picotazo venenoso","Residuos","Pueño trueno","Trueno","Rayo","Hueso palo","Huesomerang","Terremoto","Come sueños","Bola neblina","Resplandor")
+#Espacio de desarrollo para Pokémon Salvajes
+experienciapokemoninicial = 0
+lvlpokemoninicial = 5
+nivelpoksalvaje = ((lvlpokemoninicial-4),(lvlpokemoninicial+4))
+lvlsalvaje = (random.sample(nivelpoksalvaje,1))
+
+Bulbasaur = {
+    "Nombre" : "Bulbasaur",
+    "Tipo" : "Planta",
+    "LVL" : lvlsalvaje,
+    "HP" : 45,
+    "ATK" : 49,
+    "DEF" : 49,
+    "VEL" : 45,
+    "XPBS" : 64
+}
+
+Charmander = {
+    "Nombre" : "Charmander",
+    "Tipo" : "Fuego",
+    "LVL" : lvlsalvaje,
+    "HP" : 39,
+    "ATK" : 52,
+    "DEF" : 43,
+    "VEL" : 65,
+    "XPBS" : 65
+}
+
+Squirtle = {
+    "Nombre" : "Squirtle",
+    "Tipo" : "Agua",
+    "LVL" : lvlsalvaje,
+    "HP" : 39,
+    "ATK" : 52,
+    "DEF" : 43,
+    "VEL" : 65,
+    "XPBS" : 65
+}
+
+Caterpie = {
+    "Nombre" : "Caterpie",
+    "Tipo" : "Bicho",
+    "LVL": lvlsalvaje,
+    "HP" : 45,
+    "ATK" : 30,
+    "DEF" : 35,
+    "VEL" : 45,
+    "XPBS" : 53
+}
+
+Weedle = {
+    "Nombre" : "Weedle",
+    "Tipo" : "Bicho",
+    "LVL": lvlsalvaje,
+    "HP" : 40,
+    "ATK" : 35,
+    "DEF" : 30,
+    "VEL" : 50,
+    "XPBS" : 52
+}
+
+Pidgey = {
+    "Nombre" : "Pidgey",
+    "Tipo" : "Volador",
+    "LVL": lvlsalvaje,
+    "HP" : 40,
+    "ATK" : 45,
+    "DEF" : 40,
+    "VEL" : 56,
+    "XPBS" : 55
+}
+
+Rattata = {
+    "Nombre" : "Rattata",
+    "Tipo" : "Normal",
+    "LVL": lvlsalvaje,
+    "HP" : 30,
+    "ATK" : 56,
+    "DEF" : 35,
+    "VEL" : 72,
+    "XPBS" : 57
+}
+
+Pidgey = {
+    "Nombre" : "Pidgey",
+    "Tipo" : "Volador",
+    "LVL": lvlsalvaje,
+    "HP" : 40,
+    "ATK" : 45,
+    "DEF" : 40,
+    "VEL" : 56,
+    "XPBS" : 55
+}
+
+Spearow = {
+    "Nombre" : "Spearow",
+    "Tipo" : "Volador",
+    "LVL": lvlsalvaje,
+    "HP" : 40,
+    "ATK" : 60,
+    "DEF" : 30,
+    "VEL" : 70,
+    "XPBS" : 58
+}
+
+Ekans = {
+    "Nombre" : "Ekans",
+    "Tipo" : "Volador",
+    "LVL": lvlsalvaje,
+    "HP" : 40,
+    "ATK" : 45,
+    "DEF" : 40,
+    "VEL" : 56,
+    "XPBS" : 55
+}
+
+Pikachu = {
+    "Nombre" : "Pikachu",
+    "Tipo" : "Eléctrico",
+    "LVL": lvlsalvaje,
+    "HP" : 35,
+    "ATK" : 55,
+    "DEF" : 40,
+    "VEL" : 90,
+    "XPBS" : 82
+}
+
+Sandshrew = {
+    "Nombre" : "Sandshrew",
+    "Tipo" : "Tierra",
+    "LVL": lvlsalvaje,
+    "HP" : 50,
+    "ATK" : 75,
+    "DEF" : 85,
+    "VEL" : 40,
+    "XPBS" : 93
+}
+
+Vulpix = {
+    "Nombre" : "Vulpix",
+    "Tipo" : "Fuego",
+    "LVL": lvlsalvaje,
+    "HP" : 38,
+    "ATK" : 41,
+    "DEF" : 40,
+    "VEL" : 65,
+    "XPBS" : 63
+}
+
+Jigglypuff = {
+    "Nombre" : "Jigglypuff",
+    "Tipo" : "Normal",
+    "LVL": lvlsalvaje,
+    "HP" : 115,
+    "ATK" : 45,
+    "DEF" : 20,
+    "VEL" : 20,
+    "XPBS" : 76
+}
+
+Zubat = {
+    "Nombre" : "Zubat",
+    "Tipo" : "Veneno",
+    "LVL": lvlsalvaje,
+    "HP" : 40,
+    "ATK" : 45,
+    "DEF" : 35,
+    "VEL" : 55,
+    "XPBS" : 54
+}
+
+Oddish = {
+    "Nombre" : "Oddish",
+    "Tipo" : "Planta",
+    "LVL": lvlsalvaje,
+    "HP" : 45,
+    "ATK" : 50,
+    "DEF" : 55,
+    "VEL" : 30,
+    "XPBS" : 78
+}
+
+Gloom = {
+    "Nombre" : "Gloom",
+    "Tipo" : "Planta",
+    "LVL": lvlsalvaje,
+    "HP" : 60,
+    "ATK" : 65,
+    "DEF" : 70,
+    "VEL" : 40,
+    "XPBS" : 132
+}
+
+Diglett = {
+    "Nombre" : "Diglett",
+    "Tipo" : "Tierra",
+    "LVL": lvlsalvaje,
+    "HP" : 10,
+    "ATK" : 55,
+    "DEF" : 25,
+    "VEL" : 95,
+    "XPBS" : 81
+}
+
+Meowth = {
+    "Nombre" : "Meowth",
+    "Tipo" : "Normal",
+    "LVL": lvlsalvaje,
+    "HP" : 40,
+    "ATK" : 45,
+    "DEF" : 35,
+    "VEL" : 90,
+    "XPBS" : 69
+}
+
+Psyduck = {
+    "Nombre" : "Psyduck",
+    "Tipo" : "Agua",
+    "LVL": lvlsalvaje,
+    "HP" : 50,
+    "ATK" : 52,
+    "DEF" : 48,
+    "VEL" : 55,
+    "XPBS" : 80
+}
+
+Mewtwo = {
+    "Nombre" : "Mewtwo",
+    "Tipo" : "Psíquico",
+    "LVL": lvlsalvaje,
+    "HP" : 106,
+    "ATK" : 110,
+    "DEF" : 90,
+    "VEL" : 130,
+    "XPBS" : 220
+}
+
+def poksalvaje():
+    print("")
 
 def mov():
     primermovimiento = (random.sample(movimientos, 1))
-    segundomovimiento = (random.sample(movimientos, 1))
     print("Primer movimiento: ", primermovimiento)
+    return primermovimiento
+
+def mov1():
+    segundomovimiento = (random.sample(movimientos, 1))
     print("Segundo movimiento: ", segundomovimiento)
+    return segundomovimiento
 
 def stats():
     ataquepk = random.randint(1,15)
     defensa = random.randint(1,15)
     velocidad = random.randint(1,15)
     ps = random.randint(1,15)
+
+Latigo_cepa = {
+    "Nombre" : "Látigo cepa",
+    "Tipo" : "Planta",
+    "Potencia" : 35,
+    "Precisión" : 100
+}
+
+Latigazo = {
+    "Nombre" : "Latigazo",
+    "Tipo" : "Planta",
+    "Potencia" : 120,
+    "Precisión" : 85
+}
+
+Rayo_Solar = {
+    "Nombre" : "Rayo Solar",
+    "Tipo" : "Planta",
+    "Potencia" : 120,
+    "Precisión" : 100
+}
+
+Ascuas = {
+    "Nombre" : "Ascuas",
+    "Tipo" : "Fuego",
+    "Potencia" : 40,
+    "Precisión" : 100
+}
+
+Lanzallamas = {
+    "Nombre" : "Lanzallamas",
+    "Tipo" : "Fuego",
+    "Potencia" : 90,
+    "Precisión" : 100
+}
+
+Puño_fuego = {
+    "Nombre" : "Puño fuego",
+    "Tipo" : "Fuego",
+    "Potencia" : 75,
+    "Precisión" : 100
+}
+
+Hidrobomba = {
+    "Nombre" : "Hidrobomba",
+    "Tipo" : "Agua",
+    "Potencia" : 120,
+    "Precisión" : 80
+}
+
+Pistola_agua = {
+    "Nombre" : "Pistola agua",
+    "Tipo" : "Agua",
+    "Potencia" : 40,
+    "Precisión" : 100
+}
+
+Rayo_burbuja = {
+    "Nombre" : "Rayo burbuja",
+    "Tipo" : "Agua",
+    "Potencia" : 65,
+    "Precisión" : 100
+}
+
+Chupa_vidas = {
+    "Nombre" : "Chupa Vidas",
+    "Tipo" : "Bicho",
+    "Potencia" : 20,
+    "Precisión" : 100
+}
+
+Pin_misil = {
+    "Nombre" : "Pin Misil",
+    "Tipo" : "Bicho",
+    "Potencia" : 14,
+    "Precisión" : 85
+}
+
+Tijera_X = {
+    "Nombre" : "Tijera X",
+    "Tipo" : "Planta",
+    "Potencia" : 80,
+    "Precisión" : 100
+}
+
+Picotazo = {
+    "Nombre" : "Picotazo",
+    "Tipo" : "Volar",
+    "Potencia" : 35,
+    "Precisión" : 100
+}
+
+Pico_taladro = {
+    "Nombre" : "Pico taladro",
+    "Tipo" : "Volador",
+    "Potencia" : 35,
+    "Precisión" : 100
+}
+
+Tornado = {
+    "Nombre" : "Tornado",
+    "Tipo" : "Volador",
+    "Potencia" : 40,
+    "Precisión" : 100
+}
+
+Agarre = {
+    "Nombre" : "Agarre",
+    "Tipo" : "Normal",
+    "Potencia" : 55,
+    "Precisión" : 100
+}
+
+Ataque_rapido = {
+    "Nombre" : "Ataque Rápido",
+    "Tipo" : "Normal",
+    "Potencia" : 40,
+    "Precisión" : 100
+}
+
+Agarre = {
+    "Nombre" : "Agarre",
+    "Tipo" : "Normal",
+    "Potencia" : 55,
+    "Precisión" : 100
+}
+
+Bomba_huevo= {
+    "Nombre" : "Bomba",
+    "Tipo" : "Normal",
+    "Potencia" : 100,
+    "Precisión" : 75
+}
+
+Acido = {
+    "Nombre" : "Ácido",
+    "Tipo" : "Veneno",
+    "Potencia" : 40,
+    "Precisión" : 100
+}
+
+Picotazo_venenoso = {
+    "Nombre" : "Picotazo Venenoso",
+    "Tipo" : "Veneno",
+    "Potencia" : 55,
+    "Precisión" : 100
+}
+
+Residuos = {
+    "Nombre" : "Residuos",
+    "Tipo" : "Veneno",
+    "Potencia" : 65,
+    "Precisión" : 100
+}
+
+Puño_trueno = {
+    "Nombre" : "Puño Trueno",
+    "Tipo" : "Eléctrico",
+    "Potencia" : 75,
+    "Precisión" : 100
+}
+
+Trueno = {
+    "Nombre" : "Trueno",
+    "Tipo" : "Eléctrico",
+    "Potencia" : 120,
+    "Precisión" : 70
+}
+
+Rayo = {
+    "Nombre" : "Rayo",
+    "Tipo" : "Eléctrico",
+    "Potencia" : 95,
+    "Precisión" : 100
+}
+
+Hueso_Palo = {
+    "Nombre" : "Hueso Palo",
+    "Tipo" : "Tierra",
+    "Potencia" : 65,
+    "Precisión" : 85
+}
+
+Huesomerang = {
+    "Nombre" : "Huesomerang",
+    "Tipo" : "Tierra",
+    "Potencia" : 50,
+    "Precisión" : 90
+}
+
+Terremoto = {
+    "Nombre" : "Terremoto",
+    "Tipo" : "Tierra",
+    "Potencia" : 100,
+    "Precisión" : 100
+}
+
+Come_sueños = {
+    "Nombre" : "Come Sueños",
+    "Tipo" : "Psíquico",
+    "Potencia" : 100,
+    "Precisión" : 100
+}
+
+Bola_neblina = {
+    "Nombre" : "Bola Neblina",
+    "Tipo" : "Psíquico",
+    "Potencia" : 70,
+    "Precisión" : 100
+}
+
+Resplandor = {
+    "Nombre" : "Resplandor",
+    "Tipo" : "Psíquico",
+    "Potencia" : 70,
+    "Precisión" : 100
+}
+
+Pokemon = (Bulbasaur,Charmander,Squirtle,Caterpie,Weedle,Pidgey,Rattata,Spearow,Ekans,Pikachu,Sandshrew,Vulpix,Jigglypuff,Zubat,Oddish,Gloom,Diglett,Meowth,Psyduck,Mewtwo)
+movimientos = (Latigo_cepa,Latigazo,Rayo_Solar,Ascuas,Lanzallamas,Puño_fuego,Hidrobomba,Pistola_agua,Rayo_burbuja,Chupa_vidas,Pin_misil,Tijera_X,Picotazo,Pico_taladro,Tornado,Agarre,Ataque_rapido,Bomba_huevo,Acido,Picotazo_venenoso,Residuos,Puño_trueno,Trueno,Rayo,Hueso_Palo,Huesomerang,Terremoto,Come_sueños,Bola_neblina,Resplandor)
+
 
 #Introducción o bienvenida por parte del programa que le permitirá al usuario conocer la interfaz y objetivo del programa en general
 print ("------------- Bienvenido Maestro Pokemon -----------------")
@@ -151,8 +614,6 @@ if pokemoninicial != "Charmander" and pokemoninicial != "Squirtle" and pokemonin
 #La siguiente parte se encarga de la asignación de emote al pokemon seleccionado anteriormente
 emote = str(input("Por favor asígnele un nuevo apodo a su compañero Pokémon: "))
 print("Tu compañero Pokémon ",pokemoninicial," recibió el emote: ",emote)
-lvlpkinicial = 5
-xpinicial = 0
 i = 0
 c = 0
 #función que me permite definir los movimientos del compañero
@@ -163,33 +624,7 @@ print(" 1) Chequeo de estadísticas ")
 print(" 2) Batalla contra Pokémon ")
 print(" 3) Salir del videojuego")
 opcionmenu = int(input("Ingrese la opción que desee: "))
-while opcionmenu > 0 and opcionmenu<3:
-    print(" ")
-    print("CHEQUEO DE ESTADÍSTICAS")
-    print("-----------------------")
-    print(" ")
-    print("Dato | Descripción ")
-    A1 = ["Nombre", "Apodo", "Nivel", "Experiencia", "Tipo", "Movimientos"]
-    A2 = [pokemoninicial, emote, lvlpkinicial, xpinicial,tipo, mov()]
-    for i in range(i, 6):
-        print(A1[i], " : ", A2[c])
-        i = i + 1
-        c = c + 1
-    print("-------------------")
-    print("Cinta de opciones")
-    print("1) Regresar al menú")
-    print("2) Salir del programa")
-    opcionmenu2 = int(input())
-    if opcionmenu2 == 1:
-        print("-------------------")
-        print("----------MENÚ PRINCIPAL----------")
-        print(" 1) Chequeo de estadísticas ")
-        print(" 2) Batalla contra Pokémon ")
-        print(" 3) Salir del videojuego")
-        opcionmenu = int(input("Ingrese la opción que desee: "))
-    if opcionmenu2 == 2:
-        print("Se seleccionó")
-while opcionmenu > 0 and opcionmenu<3:
-    print("opcion 2")
-if opcionmenu == 3:
-    print("Gracias por usar el programa Entrenador ",nombremaestropk)
+while opcionmenu != 3:
+    if opcionmenu == 1:
+        print("----------------")
+        print("Chequeo de estadísticas")
