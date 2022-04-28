@@ -251,12 +251,10 @@ def poksalvaje():
 
 def mov():
     primermovimiento = (random.sample(movimientos, 1))
-    print("Primer movimiento: ", primermovimiento)
     return primermovimiento
 
 def mov1():
     segundomovimiento = (random.sample(movimientos, 1))
-    print("Segundo movimiento: ", segundomovimiento)
     return segundomovimiento
 
 def stats():
@@ -611,11 +609,24 @@ if pokemoninicial == "Squirtle":
 if pokemoninicial != "Charmander" and pokemoninicial != "Squirtle" and pokemoninicial != "Bulbasaur":
     print("Parece que ese Pokémon no se encuentra registrado en los iniciales o no existe en la Pokedex, se procederá a finalizar el programa")
     exit()
+
 #La siguiente parte se encarga de la asignación de emote al pokemon seleccionado anteriormente
 emote = str(input("Por favor asígnele un nuevo apodo a su compañero Pokémon: "))
 print("Tu compañero Pokémon ",pokemoninicial," recibió el emote: ",emote)
 i = 0
 c = 0
+
+#Guardado de datos del pokémon inicial:
+pokemoninicialdatos = {
+    "Nombre" : pokemoninicial,
+    "Apodo" : emote,
+    "Nivel" : lvlpokemoninicial,
+    "Experiencia" : 0,
+    "Tipo" : tipo,
+    "Movimiento 1" : mov(),
+    "Movimiento 2" : mov1()
+}
+
 #función que me permite definir los movimientos del compañero
 print("-------------------")
 print("-------------------")
@@ -628,3 +639,20 @@ while opcionmenu != 3:
     if opcionmenu == 1:
         print("----------------")
         print("Chequeo de estadísticas")
+        print(pokemoninicialdatos)
+        print("-------------------------")
+        print("2) batalla Pokémon")
+        print("3) Salir del programa")
+        opcionmenu = int(input("Por favor ingrese la opción a la que desea ir ahora"))
+    if opcionmenu == 2:
+        print("--------------")
+        print("¡Combate Pokémon!")
+        print("-------------------------")
+        print("1) Chequeo de estadísticas")
+        print("3) Salir del programa")
+        opcionmenu = int(input("Por favor ingrese la opción a la que desea ir ahora"))
+
+    opcionmenu = input("Por favor ingrese la opción a la que ahora desea ingresar")
+exit()
+# SE ESTÁ TRABAJANDO EN EL CÓDIGO PARA BATALLA Y NIVELES DEBIDO A UN ERROR EN LA EJECUCIÓN E IDENTIFICACIÓN PRINCIPAL
+# UNDER MAINTENANCE....
